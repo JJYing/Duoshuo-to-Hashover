@@ -27,7 +27,6 @@
 	//这里要设置一下
 	//
 	$domainName = "http://Anyway.FM";   //网站域名
-	$shortName = "anyway";  //Hashover 里的 shortName
 	
 	header('content-type:text/html; charset=utf-8');
 	ini_set('date.timezone', 'Asia/Shanghai');
@@ -61,7 +60,6 @@
 		$postTitleText  = substr($threadsValue['url'],(strlen($domainName)+1));
 		$postTitleText = substr($postTitleText, 0, strripos($postTitleText,"/"));
 		echo("<div class='comment'><h1>//".$postTitleText."</h1>");
-		$postTitleText = $shortName."-".$postTitleText;
 		mkdir("comments/".$postTitleText);
 		
 		$c1 = 1;
